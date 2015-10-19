@@ -1,0 +1,5 @@
+name = Mug
+description = Display mug
+package = Mug Module
+core = 7.x
+files[] = mug.module
