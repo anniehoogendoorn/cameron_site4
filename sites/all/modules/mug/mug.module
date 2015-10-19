@@ -1,0 +1,20 @@
+<?php
+
+function mug_menu() {
+  $items = array();
+  $items['mug'] = array(
+      'title' => 'Favorite Mug',
+      'page callback' => 'mug_display',
+      'access callback' => TRUE,
+      'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function mug_display() {
+  return '
+      <a href="http://www.ltdcommodities.com/Housewares---Dining/Tabletop/Drinkware/Novelty+Mugs/prod1860249.jmp?ukwcid=GooglePLA-%7Bproduct_id%7D&adpos=1o2&creative=58409110633&device=c&matchtype=&network=g&gclid=COjaiJK5z8gCFcVlfgodc4kBbw">
+          <img src="sites/all/modules/mug/mug.jpg" alt="Picture of a trailer mug"/>
+      </a>
+  ';
+}
