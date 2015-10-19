@@ -1,0 +1,42 @@
+<?php
+
+function products_menu() {
+    $items = array();
+    $items['products'] = array(
+        'title' => 'Products List',
+        "page callback" => 'products_display',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items
+}
+
+function products_display() {
+
+    //Stuff
+    $products = array();
+    $products['Brazillian Coffee'] = array(
+        'price' => 6.99,
+        'quantity' => 10,
+    );
+    $products['Costa Rica Coffee'] = array(
+        'price' => 4.99,
+        'quantity' => 7,
+    );
+    $products['Ethiopian Coffee'] = array(
+        'price' => 8.99,
+        'quantity' => 3,
+    );
+
+    $send_back = '';
+    //Handling
+    foreach($products as $product_name => $product_items){
+        $send_back .= '<p>' . $product_name . '</p>';
+        foreach($product_items as $product_info => $product_value){
+            // $total_price = $product_info['price'] * $product_info['quantity'];
+            $send_back .= '<li>' . $product_info . ': ' . $product_vaule . '</li>';
+        }
+    }
+    return $send_back;
+
+}
