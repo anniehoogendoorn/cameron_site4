@@ -1,0 +1,24 @@
+<?php
+
+function specials_menu() {
+    $items = array();
+    $items['specials'] = array(
+        'title' => 'Specials',
+        'page callback' => 'specials_display',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function specials_display() {
+    return '
+        <ul>
+            <li>Pumpkin spice</li>
+            <li>Vanilla brandy butter scone</li>
+            <li>Caramel filled muffin top</li>
+            <li>Peach tea cobbler</li>
+            <li>Green Tea cupcake with Absinthe frosting</li>
+        </ul>
+    ';
+}
