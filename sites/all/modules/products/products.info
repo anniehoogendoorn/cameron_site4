@@ -1,0 +1,5 @@
+name = Products
+description = Display products and their price per quantity
+package = Products module
+core = 7.x
+files[] = products.module
