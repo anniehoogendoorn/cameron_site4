@@ -1,0 +1,5 @@
+name = Specials
+description = Display specials
+package = Specials Module
+core = 7.x
+files[] = specials.module
