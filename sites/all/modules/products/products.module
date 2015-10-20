@@ -8,7 +8,7 @@ function products_menu() {
         'access callback' => TRUE,
         'type' => MENU_NORMAL_ITEM,
     );
-    return $items
+    return $items;
 }
 
 function products_display() {
@@ -31,10 +31,10 @@ function products_display() {
     $send_back = '';
     //Handling
     foreach($products as $product_name => $product_items){
-        $send_back .= '<p>' . $product_name . '</p>';
+        $send_back .= '<h4>' . $product_name . '</h4>';
         foreach($product_items as $product_info => $product_value){
             // $total_price = $product_info['price'] * $product_info['quantity'];
-            $send_back .= '<li>' . $product_info . ': ' . $product_vaule . '</li>';
+            $send_back .= '<li>' . $product_info . ': ' . $product_value . '</li>';
         }
     }
     return $send_back;
