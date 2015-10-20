@@ -1,0 +1,23 @@
+<?php
+
+function hello_user_menu() {
+  $items = array();
+  $items['hello_user'] = array(
+    'title' => 'Hello user!',
+    'page callback' => 'say_hey',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function say_hey() {
+  return '
+    <h1>Hey there!</h1>
+    <p>Thanks for signing up!</p>
+  ';
+}
+
+function hello_user_user_insert() {
+  $_GET['destination'] = 'hello_user';
+}
